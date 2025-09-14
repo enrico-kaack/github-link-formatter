@@ -11,7 +11,7 @@ A small tool to format GitHub links for issues and PRs to repos into readable fo
 You can install the tool using `go install`:
 
 ```bash
-go install github.com/enrico-kaack/github-link-formatter@latest
+go install github.com/enrico-kaack/github-link-formatter@main
 ```
 
 ## Usage
