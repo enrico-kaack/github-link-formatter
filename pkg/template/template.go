@@ -107,7 +107,7 @@ func (te *TemplateEngine) Format(u *url_parser.UrlParsed, ghResp *github.GhRespo
 		Title:  ghResp.Title,
 		State:  ghResp.State,
 		Url:    u.ToUrl(),
-		Type:   string(u.Type),
+		Type:   u.Type.String(),
 		Org:    u.Org,
 		Repo:   u.Repo,
 	}

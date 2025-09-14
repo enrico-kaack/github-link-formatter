@@ -15,7 +15,7 @@ type UrlParsed struct {
 }
 
 func (u *UrlParsed) ToUrl() string {
-	return fmt.Sprintf("https://github.com/%s/%s/%s/%s", u.Org, u.Repo, u.Type, u.Num)
+	return fmt.Sprintf("https://github.com/%s/%s/%s/%s", u.Org, u.Repo, string(u.Type), u.Num)
 }
 
 type UrlType string
@@ -24,6 +24,17 @@ const (
 	TypeIssue UrlType = "issues"
 	TypePR    UrlType = "pull"
 )
+
+func (t UrlType) String() string {
+	switch t {
+	case TypeIssue:
+		return "issue"
+	case TypePR:
+		return "pull"
+	default:
+		return "unknown"
+	}
+}
 
 func ParseURL(urlStr string) (*UrlParsed, error) {
 	u, err := url.Parse(urlStr)

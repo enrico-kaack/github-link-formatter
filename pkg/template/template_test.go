@@ -61,7 +61,7 @@ func TestTemplateEngine_Format(t *testing.T) {
 				return e
 			},
 			urlType: url_parser.TypeIssue,
-			wants:   "CUSTOM ISSUE 42-test-org-test-repo-Test Title-open-https://github.com/test-org/test-repo/issues/42-issues",
+			wants:   "CUSTOM ISSUE 42-test-org-test-repo-Test Title-open-https://github.com/test-org/test-repo/issues/42-issue",
 		},
 		{
 			name: "custom templates from dir - pr",
