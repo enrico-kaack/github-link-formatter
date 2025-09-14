@@ -3,6 +3,7 @@ package cmd
 import (
 	"fmt"
 	"os"
+	"path/filepath"
 
 	"github.com/enrico-kaack/github-link-formater/internal"
 	"github.com/spf13/cobra"
@@ -19,7 +20,13 @@ var rootCmd = &cobra.Command{
 		}
 		url := args[0]
 
-		formatted, err := internal.FormatGHLink(url)
+		home, err := os.UserHomeDir()
+		if err != nil {
+			panic(err)
+		}
+		configDir := filepath.Join(home, ".github-link-formatter")
+
+		formatted, err := internal.FormatGHLink(url, configDir)
 		if err != nil {
 			fmt.Printf("Error: %v\n", err)
 			return
