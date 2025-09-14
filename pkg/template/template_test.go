@@ -5,8 +5,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/enrico-kaack/github-link-formater/pkg/github"
-	url_parser "github.com/enrico-kaack/github-link-formater/pkg/url_parser"
+	"github.com/enrico-kaack/github-link-formatter/pkg/github"
+	url_parser "github.com/enrico-kaack/github-link-formatter/pkg/url_parser"
 )
 
 func TestTemplateEngine_Format(t *testing.T) {

@@ -17,17 +17,17 @@ go install github.com/enrico-kaack/github-link-formatter@latest
 ## Usage
 Run the tool with a GitHub issue or PR URL as an argument:
 ```bash
-github-link-formater <url>
+github-link-formatter <url>
 ```
 
 Combined with tools such as `pbpaste` and `pbcopy` on macOS, you can easily format links from your clipboard:
 ```bash
-github-link-formater $(pbpaste ) | pbcopy
+github-link-formatter $(pbpaste ) | pbcopy
 ```
 
 ## Configuration
 
-You can customize the output format using `text/template` files. The tool will look for templates in the folder `HOME/.github-link-formater/`. You can specify different templates for issues and PRs by naming them `issue.tmpl` and `pr.tmpl` respectively.
+You can customize the output format using `text/template` files. The tool will look for templates in the folder `HOME/.github-link-formatter/`. You can specify different templates for issues and PRs by naming them `issue.tmpl` and `pr.tmpl` respectively.
 
 You can use the [text/template](https://pkg.go.dev/text/template) syntax to create your templates. The following fields are available in the template context:
 - `Org`: The organization or user that owns the repository.

@@ -1,9 +1,9 @@
 package internal
 
 import (
-	"github.com/enrico-kaack/github-link-formater/pkg/github"
-	"github.com/enrico-kaack/github-link-formater/pkg/template"
-	url_parser "github.com/enrico-kaack/github-link-formater/pkg/url_parser"
+	"github.com/enrico-kaack/github-link-formatter/pkg/github"
+	"github.com/enrico-kaack/github-link-formatter/pkg/template"
+	url_parser "github.com/enrico-kaack/github-link-formatter/pkg/url_parser"
 )
 
 func FormatGHLink(u string, templateFolder string) (string, error) {

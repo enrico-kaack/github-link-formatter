@@ -1,4 +1,4 @@
-module github.com/enrico-kaack/github-link-formater
+module github.com/enrico-kaack/github-link-formatter
 
 go 1.25.0
 

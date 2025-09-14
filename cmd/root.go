@@ -6,7 +6,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/enrico-kaack/github-link-formater/internal"
+	"github.com/enrico-kaack/github-link-formatter/internal"
 	"github.com/spf13/cobra"
 )
 

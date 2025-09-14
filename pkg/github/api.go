@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"net/http"
 
-	url_parser "github.com/enrico-kaack/github-link-formater/pkg/url_parser"
+	url_parser "github.com/enrico-kaack/github-link-formatter/pkg/url_parser"
 )
 
 func GetFromGHApi(u url_parser.UrlParsed) (*GhResponse, error) {

@@ -7,8 +7,8 @@ import (
 	"path/filepath"
 	"text/template"
 
-	"github.com/enrico-kaack/github-link-formater/pkg/github"
-	url_parser "github.com/enrico-kaack/github-link-formater/pkg/url_parser"
+	"github.com/enrico-kaack/github-link-formatter/pkg/github"
+	url_parser "github.com/enrico-kaack/github-link-formatter/pkg/url_parser"
 )
 
 type TemplateEngine struct {
