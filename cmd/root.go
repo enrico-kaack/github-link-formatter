@@ -1,6 +1,7 @@
 package cmd
 
 import (
+	"errors"
 	"fmt"
 	"os"
 	"path/filepath"
@@ -10,13 +11,12 @@ import (
 )
 
 var rootCmd = &cobra.Command{
-	Use:   "github-link-formatter",
+	Use:   "github-link-formatter <github issue or pr url>",
 	Short: "A CLI tool to format GitHub issue and PR links",
-	Long:  `This tool takes a GitHub issue or pull request URL and formats it into a markdown link with relevant details.`,
+	Long:  `This tool formats GitHub links for issues and PRs to repos into readable formats (like Markdown links) by querying the GitHub API for more information.`,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		if len(args) < 1 {
-			fmt.Println("Please provide a GitHub issue or pull request URL.")
-			return nil
+			return errors.New("please provide a GitHub issue or pull request URL as an argument")
 		}
 		url := args[0]
 
